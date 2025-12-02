@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrimall E-Commerce Platform - Kenn Macharia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            color: #6b7280;
+        }
+        
+        .meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 6px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .meta-item strong {
+            color: #374151;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .architecture {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .flow-item {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border: 2px solid #e5e7eb;
+            font-weight: 500;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .flow-arrow {
+            font-size: 20px;
+            color: #6b7280;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .code-block .comment {
+            color: #94a3b8;
+        }
+        
+        .code-block .keyword {
+            color: #60a5fa;
+        }
+        
+        .code-block .string {
+            color: #34d399;
+        }
+        
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .highlight-card {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .highlight-card h3 {
+            font-size: 16px;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-card p {
+            color: #475569;
+            font-size: 14px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .tech-badge {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .link-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .link-btn.secondary {
+            background: #6b7280;
+        }
+        
+        .link-btn.secondary:hover {
+            background: #4b5563;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Afrimall E-Commerce Platform</h1>
+            <div class="subtitle">Full-Stack Payment Integration System | Built by Kenn Macharia</div>
+        </div>
+        
+        <div class="meta">
+            <div class="meta-item">
+                <strong>Project Type:</strong> Production E-Commerce Platform
+            </div>
+            <div class="meta-item">
+                <strong>Timeline:</strong> 4 Weeks (Solo Developer)
+            </div>
+            <div class="meta-item">
+                <strong>Status:</strong> Live & Processing Transactions
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Problem Solved</h2>
+            <p>Built a complete e-commerce platform for a US client requiring <strong>secure payment processing</strong>, real-time order management, transactional email notifications, and scalable cloud infrastructure. The system needed to handle real customer transactions with 99.9%+ reliability.</p>
+        </div>
+        
+        <div class="section">
+            <h2>🏗️ System Architecture</h2>
+            <div class="architecture">
+                <div class="flow">
+                    <div class="flow-item">React/Next.js Frontend</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">Node.js/Payload CMS Backend</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">PostgreSQL Database</div>
+                </div>
+                <div style="text-align: center; margin: 15px 0; color: #6b7280;">↕️ External Integrations ↕️</div>
+                <div class="flow">
+                    <div class="flow-item">Stripe API (Payments)</div>
+                    <div class="flow-item">SendGrid (Emails)</div>
+                    <div class="flow-item">AWS/Vercel (Hosting)</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💻 Key Technical Implementation</h2>
+            
+            <h3 style="margin: 20px 0 10px 0; color: #374151;">Payment Workflow with Stripe Webhooks</h3>
+            <div class="code-block">
+<span class="comment">// Secure webhook handler for payment confirmation</span>
+<span class="keyword">async function</span> handleStripeWebhook(request) {
+  <span class="keyword">const</span> signature = request.headers[<span class="string">'stripe-signature'</span>];
+  
+  <span class="comment">// Verify webhook signature for security</span>
+  <span class="keyword">const</span> event = stripe.webhooks.constructEvent(
+    request.body, signature, process.env.STRIPE_WEBHOOK_SECRET
+  );
+  
+  <span class="keyword">if</span> (event.type === <span class="string">'payment_intent.succeeded'</span>) {
+    <span class="comment">// Update order status in database</span>
+    <span class="keyword">await</span> updateOrderStatus(event.data.object.id, <span class="string">'paid'</span>);
+    
+    <span class="comment">// Trigger confirmation email via SendGrid</span>
+    <span class="keyword">await</span> sendOrderConfirmation(event.data.object.metadata);
+  }
+  
+  <span class="keyword">return</span> { received: <span class="keyword">true</span> };
+}</div>
+            
+            <h3 style="margin: 20px 0 10px 0; color: #374151;">Database Schema for Transaction Records</h3>
+            <div class="code-block">
+<span class="comment">-- PostgreSQL schema with ACID compliance</span>
+<span class="keyword">CREATE TABLE</span> orders (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  customer_id UUID REFERENCES customers(id),
+  stripe_payment_id VARCHAR(255) UNIQUE NOT NULL,
+  total_amount DECIMAL(10,2) NOT NULL,
+  status VARCHAR(50) DEFAULT <span class="string">'pending'</span>,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+<span class="comment">-- Index for fast payment lookups</span>
+<span class="keyword">CREATE INDEX</span> idx_stripe_payment ON orders(stripe_payment_id);</div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Technical Highlights</h2>
+            <div class="highlights">
+                <div class="highlight-card">
+                    <h3>Payment Security</h3>
+                    <p>Implemented webhook signature verification, secure API key management, and PCI-compliant payment flows</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Real-Time Processing</h3>
+                    <p>Built event-driven architecture for instant order updates and customer notifications</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Database Design</h3>
+                    <p>Designed normalized PostgreSQL schema with proper indexing for financial data integrity</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>API Architecture</h3>
+                    <p>RESTful API design with authentication, error handling, and rate limiting</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Testing & QA</h3>
+                    <p>Unit and integration tests for payment workflows, API endpoints, and database operations</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Cloud Deployment</h3>
+                    <p>CI/CD pipeline with AWS/Vercel, achieving 99.9% uptime and sub-2s load times</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🛠️ Tech Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Payload CMS</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Stripe API</span>
+                <span class="tech-badge">SendGrid</span>
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Vercel</span>
+                <span class="tech-badge">Git/GitHub</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Business Impact</h2>
+            <ul style="margin-left: 20px; color: #374151;">
+                <li style="margin-bottom: 10px;">Successfully deployed to production with <strong>real customer transactions</strong></li>
+                <li style="margin-bottom: 10px;">Achieved <strong>99.9% uptime</strong> with automated monitoring and error handling</li>
+                <li style="margin-bottom: 10px;">Optimized checkout flow reducing cart abandonment through <strong>seamless payment UX</strong></li>
+                <li style="margin-bottom: 10px;">Built scalable infrastructure ready for <strong>multi-region expansion</strong></li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🎓 Key Learnings</h2>
+            <ul style="margin-left: 20px; color: #374151;">
+                <li style="margin-bottom: 10px;"><strong>Payment System Design:</strong> Handling webhooks, idempotency, and transaction state management</li>
+                <li style="margin-bottom: 10px;"><strong>Security Best Practices:</strong> Webhook signature verification, secure credential management, PCI compliance</li>
+                <li style="margin-bottom: 10px;"><strong>Database Optimization:</strong> Query performance, indexing strategies, ACID transaction handling</li>
+                <li style="margin-bottom: 10px;"><strong>Production Debugging:</strong> Real-time monitoring, error tracking, and rapid incident response</li>
+            </ul>
+        </div>
+        
+        <div class="links">
+            <a href="https://afrimall.app" class="link-btn" target="_blank">View Live Site →</a>
+            <a href="https://github.com/SuperiorKe" class="link-btn secondary" target="_blank">GitHub Profile →</a>
+            <a href="https://linkedin.com/in/kenn-macharia" class="link-btn secondary" target="_blank">LinkedIn →</a>
+        </div>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 14px;">
+            <p><strong>Kenn Macharia</strong> | Software Engineer | Nairobi, Kenya</p>
+            <p>+254 715 035 359 | superiorwech@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>
