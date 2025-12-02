@@ -7,9 +7,9 @@ This repo tracks my daily problem-solving practice as I strengthen my fundamenta
 Solve at least 1 Codewars/LeetCode problem daily and document my learning process.
 
 ## 📊 Progress
-- **Total Problems Solved:** 1
-- **Current Streak:** 1 day
-- **Focus Areas:** Arrays, Hash Maps, Strings, Greedy Algorithms
+- **Total Problems Solved:** 2
+- **Current Streak:** 2 days
+- **Focus Areas:** Arrays, Hash Maps, Strings, Greedy Algorithms, **Stacks**
 
 ## 🧠 What I'm Learning
 - Breaking down ambiguous problems into clear, actionable steps
